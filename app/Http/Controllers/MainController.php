@@ -82,4 +82,15 @@ class MainController extends Controller
 
         ]);
     }
+
+
+    //search
+    public function searchProperty($key)
+    {
+        $data =  Property::with(['room_details'])->where('name','like','%'.$key.'%')
+                        ->orWhere('location','like','%'.$key.'%')->get();
+
+        return response()->json($data);
+    }
+
 }

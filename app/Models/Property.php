@@ -9,12 +9,16 @@ class Property extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    
+    public $timestamps = false;
     protected static function boot(){
         parent::boot();
         static::creating(function($property){
             $property->slug = Str::slug($property->name,'-');
         });
+    }
+
+    public function room_details(){
+        return $this->hasMany(RoomDetail::class);
     }
 
 }
