@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('img_url');
             $table->string('location',128);
             $table->string('type',28);
-            $table->decimal('rating',1,1);
+            $table->string('rating',28);
             $table->timestamps();
         });
     }
