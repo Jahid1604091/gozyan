@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('status',28)->default('vacant');
             $table->text('aminity')->nullable();
             $table->text('facility')->nullable();
+            $table->string('photo_url');
             $table->string('fare',128);
             $table->string('discount',128)->nullable();
             $table->foreignId('property_id')->references('id')->on('properties')->onDelete('cascade');
