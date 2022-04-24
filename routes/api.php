@@ -11,6 +11,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::post('/properties/create',[MainController::class,'createProperty']);
-Route::get('/properties',[MainController::class,'getProperty']);
+Route::get('/locations',[MainController::class,'getLocations']);
 Route::get('/properties/search/{key}',[MainController::class,'searchProperty']);
 Route::post('/room-details/create',[MainController::class,'createRoom']);

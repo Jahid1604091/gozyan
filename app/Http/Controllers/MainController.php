@@ -85,7 +85,7 @@ class MainController extends Controller
 
 
     //show all properties
-    public function getProperty()
+    public function getLocations()
     {
         $data =  Property::select('location')->get();
 
