@@ -18,6 +18,9 @@ class MainController extends Controller
             'img_url' => 'required',
             'location' => 'required',
             'rating' => 'required',
+            "old_price"=>'required',
+            "current_price"=>'required',
+            "facilities"=>'required',
             'type' => 'required',
 
         ];
@@ -32,6 +35,11 @@ class MainController extends Controller
         $property = Property::create([
             "name" => $req->name,
             "location" => $req->location,
+            "sub_location" => $req->sub_location,
+            "old_price" => $req->old_price,
+            "current_price" => $req->current_price,
+            "facilities" => $req->facilities,
+            "discount" => $req->discount,
             "img_url" => $req->img_url,
             "type" => $req->type,
             "rating" => $req->rating,

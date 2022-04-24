@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('current_price',28);
             $table->longText('facilities');
             $table->longText('discount')->default(0);
-            $table->timestamps();
+           
         });
     }
 
