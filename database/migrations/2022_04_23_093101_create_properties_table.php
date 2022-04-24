@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name',128)->unique();
             $table->string('slug',128)->unique();
+            $table->text('description');
             $table->string('img_url');
             $table->string('location',128);
             $table->string('sub_location',128);

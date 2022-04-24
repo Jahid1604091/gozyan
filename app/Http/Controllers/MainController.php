@@ -36,6 +36,7 @@ class MainController extends Controller
             "name" => $req->name,
             "location" => $req->location,
             "sub_location" => $req->sub_location,
+            "description" => $req->description,
             "old_price" => $req->old_price,
             "current_price" => $req->current_price,
             "facilities" => $req->facilities,
@@ -93,6 +94,14 @@ class MainController extends Controller
 
 
     //show all properties
+    public function getAllProperty()
+    {
+        $data =  Property::all();
+
+        return response()->json($data);
+    }
+
+    //show all location
     public function getLocations()
     {
         $data =  Property::select('location')->get();
