@@ -19,8 +19,13 @@ return new class extends Migration
             $table->string('slug',128)->unique();
             $table->string('img_url');
             $table->string('location',128);
+            $table->string('sub_location',128);
             $table->string('type',28);
             $table->string('rating',28);
+            $table->string('old_price',28);
+            $table->string('current_price',28);
+            $table->longText('facilities');
+            $table->longText('discount')->default(0);
             $table->timestamps();
         });
     }
